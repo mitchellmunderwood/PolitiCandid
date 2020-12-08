@@ -105,13 +105,13 @@ const MatchesPage = () => {
   return (
     <animated.div style={props}>
       <div id="page-container">
-        <MatchProfile match={match} />
+        {/* <MatchProfile match={match} /> */}
         <div id="big-container">
           <div className="matches-container">
             <h2>Candidates</h2>
             <div className="list-container">
               {data.filter(match => match.candidate).map(candidate => {
-                return <MatchRow match={candidate} setMatchName={setMatchName} />
+                return <MatchRow match={candidate} setMatchName={setMatchName} dispatch={dispatch}/>
               })}
             </div>
           </div>
@@ -120,7 +120,7 @@ const MatchesPage = () => {
             <h2>Users</h2>
             <div className="list-container">
               {data.filter(match => !match.candidate).map(candidate => {
-                return <MatchRow match={candidate} setMatchName={setMatchName} />
+                return <MatchRow match={candidate} setMatchName={setMatchName} dispatch={dispatch}/>
               })}
             </div>
           </div>
