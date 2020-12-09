@@ -2,10 +2,13 @@ import React from 'react';
 import MatchProfile from "../../components/MatchProfile/index";
 import { useStoreContext } from '../../store/store';
 import axios from "axios";
+import { useSpring, animated } from 'react-spring';
 import "./index.css";
 
 
 export default function MatchPage() {
+
+    const props = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, delay: 300 })
 
     const [state, dispatch] = useStoreContext();
 
@@ -31,7 +34,9 @@ export default function MatchPage() {
     }
 
     return (
-        <React.Fragment>
+        <animated.div style={props}>
+        <div id="page-container">
+        
         <MatchProfile match={state.matchProfile} />
         <div class="button-block">
         {state.following.includes(state.matchProfile.username) ?  
@@ -39,6 +44,7 @@ export default function MatchPage() {
         <button class="follow-button match-page-follow" onClick={(e)=>follow(e, state.user, state.matchProfile.username)}>Follow</button>
         }
         </div>
-        </React.Fragment>
+        </div>
+    </animated.div>
     )
 }
