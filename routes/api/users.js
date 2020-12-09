@@ -12,12 +12,12 @@ router.get("/get_matches", (req, res) => {
   });
 });
 
-router.get("/get_match", (req, res) => {
-  console.log("req body username", req.body);
-  // User.find({ username: req.body.username }, 'username name issues candidate campaign city state country county').then(user => {
-  //   console.log(user);
-  //   res.send(user);
-  // });
+router.post("/get_match", (req, res) => {
+  console.log("req body username", req.body.username);
+  User.find({ username: req.body.username }, 'username name issues candidate campaign city state country county').then(user => {
+    console.log(user);
+    res.send(user);
+  });
 });
 
 // router post delete user route using mongoose deleteOne by request body username

@@ -10,11 +10,12 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { useStoreContext } from '../../store/store';
 import axios from "axios";
-
+import { useHistory } from 'react-router-dom';
 
 // function for Home page and passing props
 function Home(props) {
 
+  const history = useHistory();
   // declare state for context in store file
   const [state, dispatch] = useStoreContext();
   // declare comp getter and setter setComp as boolean true
@@ -43,13 +44,16 @@ const unfollow = (e, follower, followee) => {
     dispatch({type: "UPDATE_FOLLOWING", following: newFollowing}); 
 }
 
-const setNewProfile = (e,nameUser) => {
-  console.log(nameUser);
+function setNewProfile(e , nameUser) {
   e.preventDefault();
-  const body = {username: nameUser};
-  axios.get("/api/users/get_match", body).then(response => {
-    console.log(response);
+  axios.post("/api/users/get_match", {username: nameUser}).then(response => {
+    dispatch({type: "SET_MATCH_PROFILE", matchProfile: response.data[0]});
+    history.push("/matchPage");
   });
+
+  // dispatch
+  // push to history
+
 }
   // return by ternary operation card based on candidacy rendering the view of user voter or candidate
   // pass user data, candidate data, and issues data by state
