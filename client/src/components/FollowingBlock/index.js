@@ -57,7 +57,7 @@ export default function FollowingBlock(props) {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                {state.following.map((follow)=> <FollowingRow follow={follow}/>)}
+                {state.following.map((follow)=> <FollowingRow unfollowFunc={props.unfollowFunc} follower={state.username} follow={follow}/>)}
                 {state.following.length === 0 && <p>Not Currently Following Anyone</p>}
                 </Collapse>
             </CardContent>

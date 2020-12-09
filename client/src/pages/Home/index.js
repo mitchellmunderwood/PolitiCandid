@@ -56,11 +56,11 @@ const unfollow = (e, follower, followee) => {
       </CardContent>) : ""}
 
       <CardContent>
-        <FollowingBlock follow={follow} unfollow={unfollow} />
+        <FollowingBlock unfollowFunc={unfollow} />
       </CardContent>
 
       <CardContent>
-        <FollowersBlock follow={follow} unfollow={unfollow} />
+        <FollowersBlock />
       </CardContent>
 
       <CardContent>
