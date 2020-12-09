@@ -50,10 +50,6 @@ function setNewProfile(e , nameUser) {
     dispatch({type: "SET_MATCH_PROFILE", matchProfile: response.data[0]});
     history.push("/matchPage");
   });
-
-  // dispatch
-  // push to history
-
 }
   // return by ternary operation card based on candidacy rendering the view of user voter or candidate
   // pass user data, candidate data, and issues data by state
