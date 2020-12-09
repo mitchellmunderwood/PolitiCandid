@@ -56,3 +56,81 @@
 #loginId {
    justify-content: center;
 }
+@media only screen and (max-width: 280px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+  
+    
+    margin-left: 15px;
+   
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 281px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+  
+    
+    margin-left: 40px;
+   
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 375px) {
+  .signupBtn, #inputEmail, .custom-btn {
+
+    
+    margin-left: 68px;
+  
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 420px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+
+    
+    margin-left: 100px;
+  
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 688px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+      width: 300px;
+      height: auto;
+      
+      margin-left: 100px;
+   
+
+  }
+}
+@media only screen and (min-width: 992px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+      width: 400px;
+      height: auto;
+      
+      margin-left: 100px;
+  
+
+  }
+}
+@media only screen and (min-width: 1312px) {
+  .signupBtn, #inputEmail, .custom-btn   {
+      width: 500px;
+      height: auto;
+      
+      margin-left: auto;
+    
+
+  }
+}

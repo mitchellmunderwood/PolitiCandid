@@ -1,1 +1,43 @@
 /* future added styling for candidate form */
+@media only screen and (min-width: 280px) {
+    h3{
+      font-size: 1em;
+      text-align: center;
+    }
+   }
+   @media only screen and (min-width: 440px) {
+     h3{
+       font-size: 1.1em;
+       text-align: left;
+     }
+   }
+   @media only screen and (min-width: 520px) {
+     h3{
+       font-size: 1.1em;
+       text-align: left;
+     }
+   }
+   @media only screen and (min-width: 680px) {
+     h3{
+       font-size: 1.2em;
+       text-align: left;
+     }
+   }
+   @media only screen and (min-width: 768px) {
+     h3{
+       font-size: 1.3em;
+       text-align: left;
+     }
+   }
+   @media only screen and (min-width: 992px) {
+     h3{
+       font-size: 1.4em;
+       text-align: left;
+     }
+   }
+   @media only screen and (min-width: 1280px) {
+     h3{
+       font-size: 1.5em;
+       text-align: left;
+     }
+   }

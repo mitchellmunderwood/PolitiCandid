@@ -33,7 +33,7 @@ function IssueSlider(props) {
 
   const useStyles = makeStyles({
     root: {
-      width: 300,
+      width: 200,
       margin: 10,
     },
   });
