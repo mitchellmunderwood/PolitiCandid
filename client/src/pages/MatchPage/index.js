@@ -1,20 +1,24 @@
 import React from 'react';
-import "./index.css";
 import MatchProfile from "../../components/MatchProfile/index";
 import { useStoreContext } from '../../store/store';
 import axios from "axios";
+import "./index.css";
 
 
 export default function MatchPage() {
 
     const [state, dispatch] = useStoreContext();
 
+    console.log("state.following", state);
+
     const follow = (e, follower, followee) => {
         e.preventDefault();
         console.log("state is:", state);
         axios.post("api/users/addfollow", {follower: follower, followee: followee}).then((res)=> console.log("addfollower",res));
         axios.post("api/users/addfollower", {follower: follower, followee: followee}).then((res)=> console.log("addfollow",res));
-        dispatch({type: "UPDATE_FOLLOWING", following: state.following.push(followee)});
+        var newFollowing = state.following 
+        newFollowing.push(followee);
+        dispatch({type: "UPDATE_FOLLOWING", following: newFollowing});
         
     }
 
@@ -28,10 +32,13 @@ export default function MatchPage() {
 
     return (
         <React.Fragment>
-        <h1>Matches Page</h1>
-        <button onClick={(e)=>follow(e, state.user, state.matchProfile.username)}>Follow</button>
-        <button onClick={(e)=>unfollow(e, state.user, state.matchProfile.username)}>Unfollow</button>
         <MatchProfile match={state.matchProfile} />
+        <div class="button-block">
+        {state.following.includes(state.matchProfile.username) ?  
+        <button class="unfollow-button match-page-unfollow" onClick={(e)=>unfollow(e, state.user, state.matchProfile.username)}>Unfollow</button>   :
+        <button class="follow-button match-page-follow" onClick={(e)=>follow(e, state.user, state.matchProfile.username)}>Follow</button>
+        }
+        </div>
         </React.Fragment>
     )
 }

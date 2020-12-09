@@ -1,37 +1,36 @@
 /* css styling for profile match  */
 #profile-block {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: 10px;
 }
+
 /* positioning for profile info */
 #profile-info-row {
   display: flex;
   flex-direction: row;
-  width: 425px;
   margin: 0px;
 }
+
 /* styling for profile page */
 #matches-profile-page {
-  border: 1px solid black;
-  /* background: rgb(255, 106, 106); */
+  /* border: 1px solid black; */
   background: white;
   color: black;
   margin: 10px;
-  /* margin-right: 40px; */
-  /* width: 300px; */
-  /* height: 700px; */
   overflow-y: hidden;
   border-radius: 5px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  /* width: 1000px; */
+  max-width: 700px;
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 /* styling for match profile area */
 #match-profile {
-  /* background: rgb(255, 106, 106); */
   background: white;
   color: black;
   display: flex;
@@ -42,11 +41,12 @@
 #profile-block p {
   margin-bottom: 5px;
 }
+
 /* styling campaign area */
 #profile-campaign-block {
   border: 1px solid black;
   border-radius: 5px;
-  width: 200px;
+  width: 300px;
   padding: 10px;
   margin: 10px;
   box-shadow: 1px 1px black;
@@ -55,7 +55,7 @@
 #profile-info-block {
   border: 1px solid black;
   border-radius: 5px;
-  width: 200px;
+  width: 300px;
   padding: 10px;
   margin: 10px;
   box-shadow: 1px 1px black;
@@ -70,7 +70,7 @@
 #profile-issue-block {
   margin: 10px;
   margin-left: 30px;
-  height: 250px;
+  height: 400px;
   overflow-y: scroll;
   width: 325px;
 }

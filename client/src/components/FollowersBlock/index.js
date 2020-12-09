@@ -8,6 +8,7 @@ import Collapse from '@material-ui/core/Collapse';
 import { makeStyles } from '@material-ui/core/styles';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useStoreContext } from '../../store/store';
+import FollowerRow from "../FollowerRow/index";
 import "./index.css";
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -55,7 +56,7 @@ export default function FollowersBlock(props) {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                {state.followers.map((follower)=> <p>{follower}</p>)}
+                {state.followers.map((follower)=> <FollowerRow follower={follower} />)}
                 {state.followers.length === 0 && <p>No Current Followers</p>}
                 </Collapse>
             </CardContent>

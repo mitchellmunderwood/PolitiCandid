@@ -1,13 +1,11 @@
 import React from 'react'
-import "./index.css";
-// import component issuetab and css for react functional component match profile
 import IssueTab from "../IssueTab/index";
-// export functional component MatchProfile and props
+import "./index.css";
+
 export default function MatchProfile(props) {
-    // declare issues as props matching issues
     console.log("match profile props:", props.match.issues);
     const issues = props.match.issues;
-    // use props to match profile using ternary operator 
+
     return (
         <div id="matches-profile-page">
             <h1 id="user-name">{props.match.name}</h1>
@@ -32,9 +30,8 @@ export default function MatchProfile(props) {
                         </div>
                     </div>
                 </div>
-                {/* use a ternary operator then map over issues and return issues tab issue */}
+                
                 <div id="profile-issues-row">
-                    {/* <h5>Issues</h5> */}
                     <div id="profile-issue-block">
                         {issues ? (issues.map(issue => {
                             return <IssueTab issue={issue} />

@@ -1,0 +1,14 @@
+.match-page-unfollow {
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.match-page-follow {
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+}

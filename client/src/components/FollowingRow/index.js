@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import "./index.css";
 
 export default function FollowingRow(props) {
     return (
-        <div>
+        <div class="follow-row">
             <span>{props.follow}</span>
-            <button>Unfollow</button>
+            <button class="unfollow-button">Unfollow</button>
         </div>
     )
 }
