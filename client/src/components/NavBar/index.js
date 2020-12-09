@@ -56,6 +56,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item active">
+                <Link to="/news" className="btn btn-link text-secondary">
+                  <span className="text-custom">News</span>
+                </Link>
+              </li>
+              <li className="nav-item active">
                 <Link to="#" className="btn btn-link text-secondary" onClick={logout}>
                   <span className="text-custom">Logout</span>
                 </Link>

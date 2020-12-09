@@ -5,6 +5,7 @@ import Navbar from './components/NavBar/index';
 import Home from './pages/Home/index';
 import MatchesPage from './pages/Matches/index';
 import MatchPage from "./pages/MatchPage/index";
+import News from "./pages/News/index";
 import Login from './pages/Login/index';
 import Signup from './pages/SignUp/index';
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
@@ -59,6 +60,7 @@ const App = () => {
             </Route>
             <Route exact path="/matchespage" component={MatchesPage} />
             <Route exact path="/matchpage" component={MatchPage} />
+            <Route exact path="/news" component={News} />
           </Switch>
         ) : (
             <Switch>
