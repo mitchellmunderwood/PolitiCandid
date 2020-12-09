@@ -1,44 +1,32 @@
-// declare express router required 
 const { response } = require('express');
 const express = require('express');
 
 const router = express.Router();
-// model document for database users model
 const User = require('../../database/models/user');
 const passport = require('../../passport');
-// Future development routing below
-// router.put('/:id', (req, res) => {
-//   console.log('route id hit', req.params.id);
-//   console.log('put body', req.body)
-//   const user_id = req.params.id;
-//   User.findOne({ _id: user_id })
-//     .then(res => {
-//       const findIssue = res.issues.map(i => i.issue).indexOf(req.body.issue)
-//       console.log("index of issues, ", findIssue)
 
-//       res.issues[findIssue].important = !res.issues[findIssue].important
-//       User.findOneAndUpdate({ _id: user_id }, { $set: { issues: res.issues } })
-//         .then(res => res.json({ res }))
-//         .catch(err => console.log(err))
-//     })
-
-// });
 // router get matches route using mongoose .find by request body of username followed by individual fields
 router.get("/get_matches", (req, res) => {
   User.find({ username: { $ne: req.body.username } }, 'username name issues candidate campaign city state country county').then(users => {
-    // console.log("users", users);
     res.send(users);
   });
 });
 
+router.get("/get_match", (req, res) => {
+  console.log("req body username", req.body);
+  // User.find({ username: req.body.username }, 'username name issues candidate campaign city state country county').then(user => {
+  //   console.log(user);
+  //   res.send(user);
+  // });
+});
+
 // router post delete user route using mongoose deleteOne by request body username
 router.post("/delete", (req, res) => {
-  // console.log("User to be deleted", req.body);
   User.deleteOne({ username: req.body.username }).then(() => res.send(200)).catch((err) => res.send(422).json(err));
 });
+
 // router post update route using mongoose findOneAndUpdate by request body username 
 router.post("/update", (req, res) => {
-  //console.log("Username on update route", req.body);
   // updates all fields data
   User.findOneAndUpdate({ username: req.body.username },
     {
@@ -54,7 +42,6 @@ router.post("/update", (req, res) => {
       }
     }, { new: true })
     .then((document) => {
-      // console.log("document after update:", document);
       res.send(200);
     }).catch((err) => res.send(422).json(err));
 });

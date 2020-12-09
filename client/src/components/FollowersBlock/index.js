@@ -56,7 +56,7 @@ export default function FollowersBlock(props) {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                {state.followers.map((follower)=> <FollowerRow follower={follower} />)}
+                {state.followers.map((follower)=> <FollowerRow setNewProfile={props.setNewProfile} follower={follower} />)}
                 {state.followers.length === 0 && <p>No Current Followers</p>}
                 </Collapse>
             </CardContent>

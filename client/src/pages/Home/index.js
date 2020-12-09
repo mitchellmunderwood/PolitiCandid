@@ -42,6 +42,15 @@ const unfollow = (e, follower, followee) => {
     const newFollowing = state.following.filter(el => el !== followee);
     dispatch({type: "UPDATE_FOLLOWING", following: newFollowing}); 
 }
+
+const setNewProfile = (e,nameUser) => {
+  console.log(nameUser);
+  e.preventDefault();
+  const body = {username: nameUser};
+  axios.get("/api/users/get_match", body).then(response => {
+    console.log(response);
+  });
+}
   // return by ternary operation card based on candidacy rendering the view of user voter or candidate
   // pass user data, candidate data, and issues data by state
   return (<div id="home-container">
@@ -56,11 +65,11 @@ const unfollow = (e, follower, followee) => {
       </CardContent>) : ""}
 
       <CardContent>
-        <FollowingBlock unfollowFunc={unfollow} />
+        <FollowingBlock unfollowFunc={unfollow} setNewProfile={setNewProfile} />
       </CardContent>
 
       <CardContent>
-        <FollowersBlock />
+        <FollowersBlock setNewProfile={setNewProfile} />
       </CardContent>
 
       <CardContent>
