@@ -1,24 +1,79 @@
 /* css for politicandid loogo media queries based on screen size */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 280px) {
   #politicandid-logo {
-    width: 500px;
-    height: auto;
+  
     padding-top: 20px;
+    margin-left: 15px;
+   
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 281px) {
+  #politicandid-logo {
+  
+    padding-top: 20px;
+    margin-left: 35px;
+   
+    width: 50%;
+    height: auto;
+
+  }
+}
+@media only screen and (min-width: 375px) {
+  #politicandid-logo {
+
+    padding-top: 20px;
+    margin-left: 68px;
+  
+    width: 50%;
+    height: auto;
+    
+
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 420px) {
   #politicandid-logo {
-    width: 500px;
-    height: auto;
+
     padding-top: 20px;
+    margin-left: 100px;
+  
+    width: 50%;
+    height: auto;
+    
+
   }
 }
+@media only screen and (min-width: 688px) {
+  #politicandid-logo {
+      width: 300px;
+      height: auto;
+      padding-top: 20px;
+      margin-left: 100px;
+   
 
+  }
+}
 @media only screen and (min-width: 992px) {
   #politicandid-logo {
-    width: 600px;
-    height: auto;
-    padding-top: 40px;
+      width: 400px;
+      height: auto;
+      padding-top: 20px;
+      margin-left: 100px;
+  
+
+  }
+}
+@media only screen and (min-width: 1312px) {
+  #politicandid-logo {
+      width: 500px;
+      height: auto;
+      padding-top: 20px;
+      margin-left: auto;
+    
+
   }
 }

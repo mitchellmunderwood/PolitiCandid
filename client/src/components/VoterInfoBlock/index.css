@@ -27,11 +27,12 @@
 }
 /* style voter button */
 #voter-button {
-  width: 200px;
+  width: 150px;
   background: #46C700;
   color: white;
   border: none;
   border-radius: 5px;
+  margin-left: 15px;
 }
 /* position campaign area */
 #campaign-block {
@@ -39,4 +40,86 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 280px) {
+  #user-name, #location-block  {
+  
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 320px) {
+  #user-name, #location-block   {
+  
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 688px) {
+  #user-name, #location-block {
+
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 768px) {
+  #user-name, #location-block   {
+
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 960px) {
+  #user-name, #location-block   {
+      width: 300px;
+      height: auto;
+      
+      margin-left: auto;
+    margin-right: auto;
+   
+
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #user-name, #location-block   {
+      width: 400px;
+      height: auto;
+      
+      margin-left: auto;
+    margin-right: auto;
+  
+
+  }
+}
+@media only screen and (min-width: 1920px) {
+  #user-name, #location-block   {
+    
+    width: 500px;
+      height: auto;
+      
+      margin-left: auto;
+      margin-right: auto;
+    
+
+  }
 }

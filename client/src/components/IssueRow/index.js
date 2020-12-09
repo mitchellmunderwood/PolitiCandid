@@ -34,7 +34,7 @@ function IssueRow(props) {
             <Slider className="issue-stance" stance={stance} issueName={issue} />
         </div>
         <div className="issue-row-line">
-            <p>Importance: </p>
+            <p id="important">Importance: </p>
             <Switch className="issue-important" important={important} issueName={issue} />
         </div>
         <div className="issue-row-line delete">
