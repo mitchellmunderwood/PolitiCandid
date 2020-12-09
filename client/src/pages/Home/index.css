@@ -1,14 +1,17 @@
 /* positioning home page and setting background */
+* {
+  box-sizing: border-box;
+}
 #home-container {
-  padding-top: 10px;
-  width: 100%;
+  /* padding-top: 10px; */
+  /* width: 100%; */
   min-height: 100vh;
   display: flex;
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   background: url(../../components/images/marble.jpg);
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 /* add logo to home page */
 #logo {

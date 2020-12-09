@@ -56,7 +56,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link to="#" className="btn btn-link text-secondary" onClick={logout}>
+                <Link to="/login" className="btn btn-link text-secondary" onClick={logout}>
                   <span className="text-custom">Logout</span>
                 </Link>
               </li>

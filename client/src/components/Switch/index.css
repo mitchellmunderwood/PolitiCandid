@@ -13,3 +13,22 @@
 .issue-important-range p {
   margin: 0px;
 }
+
+@media only screen and (min-width: 992px) {
+ h6 {
+   font-size: 19px;
+   font-weight: bold;
+ }
+ .issue-important {
+  margin-bottom: 8px;
+  margin-left: 40px;
+}
+
+.issue-important-range {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+}
+
+
+}

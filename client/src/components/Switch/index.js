@@ -28,12 +28,13 @@ export default function BooleanSwitch(props) {
   return (
     <div className="issue-important">
       <div className="issue-important-range">
-        <p>No</p>
-        <p>Yes</p>
+        <h6>No</h6>
+        <h6>Yes</h6>
       </div>
       <Switch
         onChange={() => handleChange()}
         checked={important}
+        size="medium"
         color="default"
         inputProps={{ 'aria-label': 'checkbox with default color' }}
       />

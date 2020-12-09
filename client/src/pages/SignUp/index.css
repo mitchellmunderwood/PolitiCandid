@@ -48,3 +48,81 @@
 btn-primary {
   border-color: none;
 }
+@media only screen and (max-width: 280px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+  
+    
+    margin-left: 15px;
+   
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 281px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+  
+    
+    margin-left: 40px;
+   
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 375px) {
+  .signupBtn, #inputEmail, #inputPassword {
+
+    
+    margin-left: 68px;
+  
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 420px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+
+    
+    margin-left: 100px;
+  
+    width: 50%;
+    height: auto;
+    
+
+  }
+}
+@media only screen and (min-width: 688px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+      width: 300px;
+      height: auto;
+      
+      margin-left: 100px;
+   
+
+  }
+}
+@media only screen and (min-width: 992px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+      width: 400px;
+      height: auto;
+      
+      margin-left: 100px;
+  
+
+  }
+}
+@media only screen and (min-width: 1312px) {
+  .signupBtn, #inputEmail, #inputPassword   {
+      width: 500px;
+      height: auto;
+      
+      margin-left: auto;
+    
+
+  }
+}
