@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import { LOGIN, LOGOUT, SET_USER, UNSET_USER, UPDATE_ALL_DATA, UPDATE_USER_DATA, UPDATE_ISSUES_DATA, UPDATE_CANDIDATE_DATA, UPDATE_MATCHES_DATA, UPDATE_CURRENT_MATCH, SET_MATCH_PROFILE } from './actions';
+import { LOGIN, LOGOUT, SET_USER, UNSET_USER, UPDATE_ALL_DATA, UPDATE_USER_DATA, UPDATE_ISSUES_DATA, UPDATE_CANDIDATE_DATA, UPDATE_MATCHES_DATA, UPDATE_CURRENT_MATCH, SET_MATCH_PROFILE, UPDATE_FOLLOWING } from './actions';
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -22,7 +22,9 @@ const reducer = (state, action) => {
         loading: false,
         userData: action.userData, 
         issuesData: action.issuesData,
-        candidateData: action.candidateData
+        candidateData: action.candidateData,
+        followers: action.followers,
+        following: action.following
       };
     
     case UNSET_USER:
@@ -35,7 +37,9 @@ const reducer = (state, action) => {
         issuesData: null,
         candidateData: null,
         matchesData: null,
-        currentMatch: null
+        currentMatch: null,
+        following: null,
+        followers: null
       };
 
 
@@ -94,6 +98,13 @@ const reducer = (state, action) => {
         matchProfile: action.matchProfile
       };
 
+    case UPDATE_FOLLOWING:
+      console.log("Reducer - Add following", action);
+      return {
+        ...state, 
+        following: action.following
+      };
+
     default:
       console.log("Reducer - Default, Return State:", action)
       return state;
@@ -105,6 +116,8 @@ const StoreProvider = ({ value = [], ...props }) => {
     user: null,
     loading: false,
     userData: null,
+    following: null, 
+    followers: null,
     issuesData: null,
     candidateData: null, 
     matchesData: null, 

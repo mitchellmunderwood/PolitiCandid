@@ -52,6 +52,8 @@ const Login = () => {
             userData: response.data.userData,
             issuesData: response.data.issuesData,
             candidateData: response.data.candidateData,
+            followers: response.data.followers,
+            following: response.data.following
           });
           // reset route to home 
           history.replace('/');

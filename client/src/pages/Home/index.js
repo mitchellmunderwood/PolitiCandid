@@ -1,5 +1,5 @@
 // import dependencies and stylings
-import React from 'react';
+import React,{ useEffect} from 'react';
 import "./index.css";
 import VoterInfoBlock from "../../components/VoterInfoBlock/index";
 import VoterIssueBlock from "../../components/VoterIssueBlock/index";
@@ -9,8 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import { useStoreContext } from '../../store/store';
 // function for Home page and passing props
 function Home(props) {
-  //console.log("Home Component Props", props.state)
-  // const data = API.getFakeData();
+
   // declare state for context in store file
   const [state, dispatch] = useStoreContext();
   // declare comp getter and setter setComp as boolean true
@@ -38,6 +37,8 @@ function Home(props) {
       </CardContent>
     </Card>
 
+        {state.following.map((el)=> <p>{el}</p>)}
+      
   </div>)
 };
 

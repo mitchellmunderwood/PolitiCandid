@@ -18,6 +18,8 @@ const userSchema = new Schema({
   issues: [{ issue: { type: String, required: true }, important: { type: Boolean, required: true }, stance: { type: Number, required: true } }],
   candidate: { type: Boolean, required: true, default: false },
   campaign: { level: { type: String, required: false }, body: { type: String, required: false }, office: { type: String, required: false } },
+  following: {type: Array, required: true, default: []},
+  followers: {type: Array, required: true, default: []}
 });
 
 // Define schema methods

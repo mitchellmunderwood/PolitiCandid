@@ -101,13 +101,15 @@ router.post(
 
     User.find({ username: req.user.username }).then(document => {
       console.log("document issues at login:", document[0].issues);
-      const { name, city, county, state, country, zip, issues, candidate, campaign } = document[0];
+      const { name, city, county, state, country, zip, issues, candidate, campaign, following, followers } = document[0];
 
       res.send({
         username: req.user.username,
-        userData: { name, city, county, state, country, zip },
+        userData: { name, city, county, state, country, zip},
         issuesData: issues,
         candidateData: { candidate, campaign },
+        following: following,
+        followers: followers,
         matchesData: null,
         currentMatch: null
       });
@@ -121,11 +123,13 @@ router.get('/', (req, res) => {
     console.log('Hit GET Route', req.user);
 
     User.find({ username: req.user.username }).then(document => {
-      const { name, city, county, state, country, zip, issues, candidate, campaign } = document;
+      const { name, city, county, state, country, zip, issues, candidate, campaign, followers, following } = document;
 
       res.send({
         username: req.user.username,
-        userData: { name, city, county, state, country, zip },
+        userData: { name, city, county, state, country, zip},
+        following: following,
+        followers: followers,
         issuesData: issues,
         candidateData: { candidate, campaign },
         matchesData: null,
@@ -145,6 +149,44 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).json({ msg: 'NO USER TO LOGOUT' });
   }
+});
+
+router.post('/addfollow', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: follower},{$push: {following: followee}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+router.post('/addfollower', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: followee},{$push: {followers: follower}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+
+
+router.post('/removefollow', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: follower},{$pull: {following: followee}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+router.post('/removefollower', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: followee},{$pull: {followers: follower}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
 });
 
 module.exports = router;

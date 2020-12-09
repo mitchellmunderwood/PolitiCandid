@@ -34,6 +34,8 @@ const App = () => {
           userData: response.data.userData,
           issuesData: response.data.issuesData,
           candidateData: response.data.candidateData,
+          following: response.data.following, 
+          followers: response.data.followers
         });
         
         history.push('/');
