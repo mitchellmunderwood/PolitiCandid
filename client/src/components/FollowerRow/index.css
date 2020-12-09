@@ -1,0 +1,13 @@
+.follower-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  background: gainsboro;
+  border-radius: 5px;
+}
+
+.follower-row:hover {
+  background: rgb(189, 189, 189);
+}

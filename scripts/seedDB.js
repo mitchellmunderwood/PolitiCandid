@@ -15,7 +15,9 @@ const Seed = [
     password: "$2a$10$ma0MBuyBvsrA0YRZKYQf6uaLJVSLITsQAKIlwQuhNs509OLV5zWe6",
     issues: [{ issue: "Bunnies", stance: 5, important: true }, { issue: "Kitties", stance: -5, important: true }],
     candidate: true,
-    campaign: { level: "County", body: "School Board", office: "School Board Chair" }
+    campaign: { level: "County", body: "School Board", office: "School Board Chair" },
+    following: [],
+    followers: [],
   },
   {
     name: "Luke Evans",
@@ -26,7 +28,9 @@ const Seed = [
     username: "luke@evans.com",
     password: "$2a$10$6hxNMqK/ITjkrfClBtH7TeV1lCwEcfRddO8.sBBDEogvuGh06qtRK",
     issues: [{ issue: "Fortnight", stance: 5, important: true }, { issue: "Tiger King", stance: -5, important: true }],
-    candidate: false
+    candidate: false,
+    following: [],
+    followers: [],
   },
   {
     name: "Matthew Neal",
@@ -37,7 +41,9 @@ const Seed = [
     username: "matthew@neal.com",
     password: "$2a$10$r0ldOGYNx555jgQUn.8.y.mWv/rZiNms7EDwuNpxH2khaSfx5V8pq",
     issues: [{ issue: "Cycling", stance: 5, important: true }, { issue: "Printing", stance: -5, important: true }],
-    candidate: false
+    candidate: false,
+    following: [],
+    followers: [],
   },
   {
     name: "Victor Litzau",
@@ -48,7 +54,9 @@ const Seed = [
     username: "victor@litzau.com",
     password: "$2a$10$5RmszFBpPRG0rLb18ngDy.K/sMoATHNpa25SHGdTGyPdpYG56gn9C",
     issues: [{ issue: "Airbrushing", stance: 5, important: true }, { issue: "Charleston", stance: -5, important: true }],
-    candidate: false
+    candidate: false,
+    following: [],
+    followers: [],
   },
   {
     name: "Barack Obama",
@@ -60,7 +68,9 @@ const Seed = [
     password: "$2a$10$ZXfbrlDvYTsXGgcTxEypxOS0ePLMsGt/p7VaYAZNRVPLdCzVgwdU2",
     issues: [{ issue: "LGBT Rights", stance: 9, important: true }, { issue: "Government Mandates", stance: 10, important: true }, { issue: "First Amendment", stance: 0, important: true }, { issue: "Gun Control", stance: -5, important: true }, { issue: "Net Neutrality", stance: 9, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Executive", office: "President" }
+    campaign: { level: "Federal", body: "Executive", office: "President" },
+    following: [],
+    followers: [],
   },
   {
     name: "Cardi B",
@@ -72,7 +82,9 @@ const Seed = [
     password: "$2a$10$WgcAQIX0/8nqFVkmiA.ZQeh0U.P3T/w2FO7aDXcMftX6n29b9SUbO",
     issues: [{ issue: "LGBT Rights", stance: 7, important: true }, { issue: "Government Mandates", stance: 1, important: true }, { issue: "First Amendment", stance: 0, important: true }, { issue: "Gun Control", stance: 5, important: true }, { issue: "Net Neutrality", stance: 5, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Executive", office: "President" }
+    campaign: { level: "Federal", body: "Executive", office: "President" },
+    following: [],
+    followers: [],
   },
   {
     name: "Andrew Yang",
@@ -84,7 +96,9 @@ const Seed = [
     password: "$2a$10$BeewrYdSU8IOiNoZgcsld.LI.h8UKqIWGBE.PA7Iz7oS2BO5cW2Ry",
     issues: [{ issue: "LGBT Rights", stance: 7, important: true }, { issue: "Government Mandates", stance: 9, important: true }, { issue: "First Amendment", stance: 0, important: true }, { issue: "Gun Control", stance: 5, important: true }, { issue: "Net Neutrality", stance: 10, important: true }, { issue: "Government Healthcare", stance: 3, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Congress", office: "US Senate" }
+    campaign: { level: "Federal", body: "Congress", office: "US Senate" },
+    following: [],
+    followers: [],
   },
   {
     name: "Hillary Clinton",
@@ -96,7 +110,9 @@ const Seed = [
     password: "$2a$10$E1DOQmQ1aZ31TOqgAUbq4OWygkE0nHLG1Ps0Ruir6Tak2ZlDwqMw6",
     issues: [{ issue: "LGBT Rights", stance: 9, important: true }, { issue: "Government Mandates", stance: 9, important: true }, { issue: "First Amendment", stance: 3, important: true }, { issue: "Gun Control", stance: 8, important: true }, { issue: "Net Neutrality", stance: 3, important: true }, { issue: "Government Healthcare", stance: 7, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Congress", office: "US Senate" }
+    campaign: { level: "Federal", body: "Congress", office: "US Senate" },
+    following: [],
+    followers: [],
   },
   {
     name: "Kamala Harris",
@@ -108,7 +124,9 @@ const Seed = [
     password: "$2a$10$Z7ukAQglMw/k7O2nrC0KEeQfeVQW9is.Qrqe3zjHE/tDxoWv/hpq6",
     issues: [{ issue: "LGBT Rights", stance: 9, important: true }, { issue: "Government Mandates", stance: 9, important: true }, { issue: "First Amendment", stance: 7, important: true }, { issue: "Gun Control", stance: 10, important: true }, { issue: "Net Neutrality", stance: 9, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Congress", office: "US Senate" }
+    campaign: { level: "Federal", body: "Congress", office: "US Senate" },
+    following: [],
+    followers: [],
   },
   {
     name: "Ronald Reagan",
@@ -120,7 +138,9 @@ const Seed = [
     password: "$2a$10$dbBD/ql5nDlBs707T5PHIecL/4UAknIMZ7EQKn63K1LueV98sfOQe",
     issues: [{ issue: "LGBT Rights", stance: -3, important: true }, { issue: "Government Mandates", stance: 9, important: true }, { issue: "First Amendment", stance: 8, important: true }, { issue: "Gun Control", stance: -3, important: true }, { issue: "Net Neutrality", stance: 9, important: true }, { issue: "Government Healthcare", stance: -9, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "House", office: "US House of Representatives District 2" }
+    campaign: { level: "Federal", body: "House", office: "US House of Representatives District 2" },
+    following: [],
+    followers: [],
   },
   {
     name: "Bill Clinton",
@@ -132,7 +152,9 @@ const Seed = [
     password: "$2a$10$/a1RU7wP/sFB8Gx6sm1.pegcYawifLHH55A9irvD7klKrsBACC3.m",
     issues: [{ issue: "LGBT Rights", stance: 0, important: true }, { issue: "Government Mandates", stance: 5, important: true }, { issue: "First Amendment", stance: 5, important: true }, { issue: "Gun Control", stance: 0, important: true }, { issue: "Net Neutrality", stance: 5, important: true }, { issue: "Government Healthcare", stance: 6, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "House", office: "US House of Representatives District 2" }
+    campaign: { level: "Federal", body: "House", office: "US House of Representatives District 2" },
+    following: [],
+    followers: [],
   },
   {
     name: "Roy Cooper",
@@ -144,7 +166,9 @@ const Seed = [
     password: "$2a$10$gPcys7e73CYkIA/mv5BaSeqt5ihth3hmXM21xx9tvImaXUafdctX6",
     issues: [{ issue: "LGBT Rights", stance: 2, important: true }, { issue: "Government Mandates", stance: 5, important: true }, { issue: "First Amendment", stance: -2, important: true }, { issue: "Gun Control", stance: 6, important: true }, { issue: "Net Neutrality", stance: 6, important: true }, { issue: "Government Healthcare", stance: 6, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Executive", office: "Governor" }
+    campaign: { level: "State", body: "Executive", office: "Governor" },
+    following: [],
+    followers: [],
   },
   {
     name: "Dan Forest",
@@ -156,7 +180,9 @@ const Seed = [
     password: "$2a$10$y5d8uSPDpD94tQZJBhYNReT2CmxS0YNGw8zcmvH2gwkIIo2KGhJ8C",
     issues: [{ issue: "LGBT Rights", stance: -2, important: true }, { issue: "Government Mandates", stance: 7, important: true }, { issue: "First Amendment", stance: 10, important: true }, { issue: "Gun Control", stance: 9, important: true }, { issue: "Net Neutrality", stance: 10, important: true }, { issue: "Government Healthcare", stance: -10, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Executive", office: "Governor" }
+    campaign: { level: "State", body: "Executive", office: "Governor" },
+    following: [],
+    followers: [],
   },
   {
     name: "Miley Cyrus",
@@ -168,7 +194,9 @@ const Seed = [
     password: "$2a$10$C11KcwcxqtDlBkJo3JRrE.VMxFooUs9OL.9GryqagIfRs7sgDERG6",
     issues: [{ issue: "LGBT Rights", stance: 10, important: true }, { issue: "Government Mandates", stance: -4, important: true }, { issue: "First Amendment", stance: 6, important: true }, { issue: "Gun Control", stance: 9, important: true }, { issue: "Net Neutrality", stance: 3, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" }
+    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" },
+    following: [],
+    followers: [],
   },
   {
     name: "Joe Biden",
@@ -180,7 +208,9 @@ const Seed = [
     password: "$2a$10$5.ul7hUFMWCRlTl2l2Fd.OhA66ouaWCp9Mlb0aMGQU64md.54h/PW",
     issues: [{ issue: "LGBT Rights", stance: 7, important: true }, { issue: "Government Mandates", stance: 7, important: true }, { issue: "First Amendment", stance: 6, important: true }, { issue: "Gun Control", stance: 7, important: true }, { issue: "Net Neutrality", stance: 3, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Executive", office: "President" }
+    campaign: { level: "Federal", body: "Executive", office: "President" },
+    following: [],
+    followers: [],
   },
   {
     name: "Donald Trump",
@@ -192,7 +222,9 @@ const Seed = [
     password: "$2a$10$iLGv3b9cKowZQOUux587AOhce2Nu6e4CMCaMRN/4f0xFA97F8OTuG",
     issues: [{ issue: "LGBT Rights", stance: 0, important: true }, { issue: "Government Mandates", stance: 0, important: true }, { issue: "First Amendment", stance: 9, important: true }, { issue: "Gun Control", stance: 0, important: true }, { issue: "Net Neutrality", stance: 10, important: true }, { issue: "Government Healthcare", stance: -10, important: true }],
     candidate: true,
-    campaign: { level: "Federal", body: "Executive", office: "President" }
+    campaign: { level: "Federal", body: "Executive", office: "President" },
+    following: [],
+    followers: [],
   },
   {
     name: "Kanye West",
@@ -204,7 +236,9 @@ const Seed = [
     password: "$2a$10$4edWIQwC9BcUuI9SSAE48eFPQZRanzKvaXihu7LzVCO0DrSmWg0Xy",
     issues: [{ issue: "LGBT Rights", stance: 7, important: true }, { issue: "Government Mandates", stance: 6, important: true }, { issue: "First Amendment", stance: -3, important: true }, { issue: "Gun Control", stance: 1, important: true }, { issue: "Net Neutrality", stance: 0, important: true }, { issue: "Government Healthcare", stance: 7, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" }
+    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" },
+    following: [],
+    followers: [],
   },
   {
     name: "Elizabeth Warren",
@@ -216,7 +250,9 @@ const Seed = [
     password: "$2a$10$1hGBiFXc5QFTDGvRTs5PpunbL4D4n2G5tgoy8nXh3crVbBnyJImJe",
     issues: [{ issue: "LGBT Rights", stance: 9, important: true }, { issue: "Government Mandates", stance: 8, important: true }, { issue: "First Amendment", stance: 3, important: true }, { issue: "Gun Control", stance: 9, important: true }, { issue: "Net Neutrality", stance: 6, important: true }, { issue: "Government Healthcare", stance: 7, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" }
+    campaign: { level: "State", body: "Department of Justice", office: "Attorney General" },
+    following: [],
+    followers: [],
   },
   {
     name: "Bernie Sanders",
@@ -228,7 +264,9 @@ const Seed = [
     password: "$2a$10$FAB3rNcIx/eZPBljb2sWn.n1ScSAvz93YHbcb.MNw.KI000dhH96K",
     issues: [{ issue: "LGBT Rights", stance: 7, important: true }, { issue: "Government Mandates", stance: 10, important: true }, { issue: "First Amendment", stance: 2, important: true }, { issue: "Gun Control", stance: 9, important: true }, { issue: "Net Neutrality", stance: 4, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Council", office: "NC Auditor" }
+    campaign: { level: "State", body: "Council", office: "NC Auditor" },
+    following: [],
+    followers: [],
   },
   {
     name: "Mickey Mouse",
@@ -240,7 +278,9 @@ const Seed = [
     password: "$2a$10$4DPooHKPKRTR24YOERKkNuH9fWxYxIU82nqIVena4BwfL1Fs0b4p2",
     issues: [{ issue: "LGBT Rights", stance: 6, important: true }, { issue: "Government Mandates", stance: 7, important: true }, { issue: "First Amendment", stance: 5, important: true }, { issue: "Gun Control", stance: 3, important: true }, { issue: "Net Neutrality", stance: 0, important: true }, { issue: "Government Healthcare", stance: 10, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "Council", office: "NC Auditor" }
+    campaign: { level: "State", body: "Council", office: "NC Auditor" },
+    following: [],
+    followers: [],
   },
   {
     name: "Carl Vega",
@@ -252,7 +292,9 @@ const Seed = [
     password: "$2a$10$jibvNxVzwBj/fk5NzbyV8e2cTwml.3jcxEFzDp43irApM9b.Rs3jW",
     issues: [{ issue: "LGBT Rights", stance: -6, important: true }, { issue: "Government Mandates", stance: -7, important: true }, { issue: "First Amendment", stance: -5, important: true }, { issue: "Gun Control", stance: -3, important: true }, { issue: "Net Neutrality", stance: -3, important: true }, { issue: "Government Healthcare", stance: -8, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "DOA&CS", office: "Commissioner of Agriculture" }
+    campaign: { level: "State", body: "DOA&CS", office: "Commissioner of Agriculture" },
+    following: [],
+    followers: [],
   },
   {
     name: "Zach Rickards",
@@ -264,7 +306,9 @@ const Seed = [
     password: "$2a$10$6N8GngTp9se1Kd1ru8MHw.xhaZac5q56ohYI6nhYLyUon4lFgemm6",
     issues: [{ issue: "LGBT Rights", stance: 8, important: true }, { issue: "Government Mandates", stance: 8, important: true }, { issue: "First Amendment", stance: 2, important: true }, { issue: "Gun Control", stance: 3, important: true }, { issue: "Net Neutrality", stance: 5, important: true }, { issue: "Government Healthcare", stance: -10, important: true }],
     candidate: true,
-    campaign: { level: "State", body: "DOA&CS", office: "Commissioner of Agriculture" }
+    campaign: { level: "State", body: "DOA&CS", office: "Commissioner of Agriculture" },
+    following: [],
+    followers: [],
   }
 ];
 

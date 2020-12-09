@@ -1,44 +1,32 @@
-// declare express router required 
 const { response } = require('express');
 const express = require('express');
 
 const router = express.Router();
-// model document for database users model
 const User = require('../../database/models/user');
 const passport = require('../../passport');
-// Future development routing below
-// router.put('/:id', (req, res) => {
-//   console.log('route id hit', req.params.id);
-//   console.log('put body', req.body)
-//   const user_id = req.params.id;
-//   User.findOne({ _id: user_id })
-//     .then(res => {
-//       const findIssue = res.issues.map(i => i.issue).indexOf(req.body.issue)
-//       console.log("index of issues, ", findIssue)
 
-//       res.issues[findIssue].important = !res.issues[findIssue].important
-//       User.findOneAndUpdate({ _id: user_id }, { $set: { issues: res.issues } })
-//         .then(res => res.json({ res }))
-//         .catch(err => console.log(err))
-//     })
-
-// });
 // router get matches route using mongoose .find by request body of username followed by individual fields
 router.get("/get_matches", (req, res) => {
   User.find({ username: { $ne: req.body.username } }, 'username name issues candidate campaign city state country county').then(users => {
-    // console.log("users", users);
     res.send(users);
+  });
+});
+
+router.post("/get_match", (req, res) => {
+  console.log("req body username", req.body.username);
+  User.find({ username: req.body.username }, 'username name issues candidate campaign city state country county').then(user => {
+    console.log(user);
+    res.send(user);
   });
 });
 
 // router post delete user route using mongoose deleteOne by request body username
 router.post("/delete", (req, res) => {
-  // console.log("User to be deleted", req.body);
   User.deleteOne({ username: req.body.username }).then(() => res.send(200)).catch((err) => res.send(422).json(err));
 });
+
 // router post update route using mongoose findOneAndUpdate by request body username 
 router.post("/update", (req, res) => {
-  //console.log("Username on update route", req.body);
   // updates all fields data
   User.findOneAndUpdate({ username: req.body.username },
     {
@@ -54,7 +42,6 @@ router.post("/update", (req, res) => {
       }
     }, { new: true })
     .then((document) => {
-      // console.log("document after update:", document);
       res.send(200);
     }).catch((err) => res.send(422).json(err));
 });
@@ -101,13 +88,15 @@ router.post(
 
     User.find({ username: req.user.username }).then(document => {
       console.log("document issues at login:", document[0].issues);
-      const { name, city, county, state, country, zip, issues, candidate, campaign } = document[0];
+      const { name, city, county, state, country, zip, issues, candidate, campaign, following, followers } = document[0];
 
       res.send({
         username: req.user.username,
-        userData: { name, city, county, state, country, zip },
+        userData: { name, city, county, state, country, zip},
         issuesData: issues,
         candidateData: { candidate, campaign },
+        following: following,
+        followers: followers,
         matchesData: null,
         currentMatch: null
       });
@@ -121,11 +110,13 @@ router.get('/', (req, res) => {
     console.log('Hit GET Route', req.user);
 
     User.find({ username: req.user.username }).then(document => {
-      const { name, city, county, state, country, zip, issues, candidate, campaign } = document;
+      const { name, city, county, state, country, zip, issues, candidate, campaign, followers, following } = document;
 
       res.send({
         username: req.user.username,
-        userData: { name, city, county, state, country, zip },
+        userData: { name, city, county, state, country, zip},
+        following: following,
+        followers: followers,
         issuesData: issues,
         candidateData: { candidate, campaign },
         matchesData: null,
@@ -145,6 +136,44 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).json({ msg: 'NO USER TO LOGOUT' });
   }
+});
+
+router.post('/addfollow', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: follower},{$push: {following: followee}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+router.post('/addfollower', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: followee},{$push: {followers: follower}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+
+
+router.post('/removefollow', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: follower},{$pull: {following: followee}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
+});
+
+router.post('/removefollower', (req,res) => {
+  const follower = req.body.follower;
+  const followee = req.body.followee;
+
+  User.update({username: followee},{$pull: {followers: follower}}).then((document) => {
+    res.send(200);
+  }).catch((err) => res.send(422).json(err));
 });
 
 module.exports = router;

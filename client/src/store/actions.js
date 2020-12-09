@@ -1,5 +1,4 @@
-// action file used by store file in switch cases and 
-// variables are used thoughout front end to maintain conformity and avoid mistakes
+// Don't know where 'LOADING' is used
 export const LOADING = 'LOADING';
 
 export const LOGIN = 'LOGIN';
@@ -13,3 +12,7 @@ export const UPDATE_ISSUES_DATA = "UPDATE_ISSUES_DATA";
 export const UPDATE_CANDIDATE_DATA = "UPDATE_CANDIDATE_DATA";
 export const UPDATE_MATCHES_DATA = "UPDATE_MATCHES_DATA";
 export const UPDATE_CURRENT_MATCH = "UPDATE_CURRENT_MATCH";
+
+export const SET_MATCH_PROFILE = "SET_MATCH_PROFILE";
+
+export const UPDATE_FOLLOWING = "UPDATE_FOLLOWING"

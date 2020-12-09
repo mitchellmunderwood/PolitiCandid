@@ -21,7 +21,7 @@ export default {
                 { username: 'T@Z.com', name: "Teddy Zoller", candidate: true, office: "Teacher", body: "school", level: "Local" },
                 { username: 'F@W.com', name: "Frederick White", candidate: true, office: "Leader", body: "FDC", level: "National" }]
         );
-    }
+    },
 
 };
 
