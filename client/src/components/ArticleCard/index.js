@@ -7,29 +7,29 @@ import Link from '@material-ui/core/Link';
 
 
 export default function ArticleCard(props) {
-    const { article } = props;
+  const { article } = props;
 
 
-    return (
+  return (
 
-        <Grid item  xs={12} sm={12} md={12}>
-                
-        <Card className="card">
-        <Link href={article.url}>
+      <Grid item  xs={12} sm={12} md={12}>
+              
+      <Card className="card">
+      <Link href={article.web_url}>
+      
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {article.headline.main}
+          </Typography>
+          <Typography>
+            {article.abstract}
+          </Typography>
+        </CardContent>
+
         
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {article.title}
-            </Typography>
-            <Typography>
-              {article.description}
-            </Typography>
-          </CardContent>
-
-          
-          </Link>
-        </Card>
-        
-      </Grid>
-    )
+        </Link>
+      </Card>
+      
+    </Grid>
+  )
 }
