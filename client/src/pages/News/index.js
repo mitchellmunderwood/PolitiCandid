@@ -14,21 +14,21 @@ function News() {
     loading: false,
     apiError: ""})
 
-  const searchForTopic = async topic => {
-    try {
-      dispatch({ ...state, loading: true });
-      const response = await getArticles(topic);
-      console.log(response);
-      dispatch({ 
-        ...state,  
-        articles: response.articles,
-        searchTopic: topic,
-        totalResults: response.totalResults
-      });
-    } catch (error) {
-       state.apiError =  "Could not find any articles";
-    }
-  };
+    const searchForTopic = async topic => {
+      try {
+        dispatch({ ...state, loading: true });
+        const response = await getArticles(topic);
+        console.log(response);
+        dispatch({ 
+          ...state,  
+          articles: response.response.docs,
+          searchTopic: topic,
+          totalResults: 10,
+        });
+      } catch (error) {
+         state.apiError =  "Could not find any articles";
+      }
+    };
 
   const props = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, delay: 300 })
 
