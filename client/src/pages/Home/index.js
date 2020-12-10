@@ -29,6 +29,7 @@ function Home(props) {
 
   const follow = (e, follower, followee) => {
     e.preventDefault();
+    e.stopPropagation();
     console.log("state is:", state);
     axios.post("api/users/addfollow", {follower: follower, followee: followee}).then((res)=> console.log("addfollower",res));
     axios.post("api/users/addfollower", {follower: follower, followee: followee}).then((res)=> console.log("addfollow",res));
@@ -38,6 +39,7 @@ function Home(props) {
 
 const unfollow = (e, follower, followee) => {
     e.preventDefault();
+    e.stopPropagation();
     axios.post("api/users/removefollow", {follower: follower, followee: followee}).then((res)=> console.log(res));
     axios.post("api/users/removefollower", {follower: follower, followee: followee}).then((res)=> console.log(res));
     const newFollowing = state.following.filter(el => el !== followee);
@@ -46,6 +48,7 @@ const unfollow = (e, follower, followee) => {
 
 function setNewProfile(e , nameUser) {
   e.preventDefault();
+  e.stopPropagation();
   axios.post("/api/users/get_match", {username: nameUser}).then(response => {
     dispatch({type: "SET_MATCH_PROFILE", matchProfile: response.data[0]});
     history.push("/matchPage");
