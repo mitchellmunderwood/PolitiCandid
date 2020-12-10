@@ -51,7 +51,7 @@ function News() {
                 
                 />
                 <p style={{ textAlign: "center" }}>
-                Powered by <a href="https://newsapi.org/">NewsAPI.org</a>
+                Powered by <a href="https://nytimes.com/">New York Times</a>
                 </p>
                 {state.loading && (
                 <p style={{ textAlign: "center" }}>Searching for articles...</p>
