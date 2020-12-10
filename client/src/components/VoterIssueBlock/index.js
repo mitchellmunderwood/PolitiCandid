@@ -56,6 +56,8 @@ export default function VoterValuesBlock(props) {
     return (
         <Card>
             <CardActions>
+                <div class="is">
+                    <div class="in">
                 <h1 id="issues">Issues</h1>
                 <IconButton
                     className={clsx(classes.expand, {
@@ -67,6 +69,8 @@ export default function VoterValuesBlock(props) {
                 >
                     <ExpandMoreIcon />
                 </IconButton>
+                </div>
+                </div>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <div id="issues-container">
