@@ -43,7 +43,7 @@ export default function FollowersBlock(props) {
         <Card>
             <CardContent>
                 <CardActions>
-                    <h3 id="user-name">Followers</h3>
+                    <h3>Followers</h3>
                     <IconButton
                         className={clsx(classes.expand, {
                             [classes.expandOpen]: expanded,

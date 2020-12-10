@@ -1,23 +1,28 @@
 /* css issue row placement, styling and media queries for different size screens */
-
 .issue-row {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
   /* border: 1px solid black; */
-  width: 600px;
+  width: 500px;
   padding: 20px;
   padding-bottom: 10px;
-  background: rgb(245, 241, 241);
+  background: rgb(238, 238, 238);
   border-radius: 5px;
   box-shadow: 2px 2px #b3b3b3;
 }
 
-#issues-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media only screen and (max-width: 768px) {
+  /* .issue-row {
+    width: 400px;
+  } */
+}
+
+@media only screen and (min-width: 992px) {
+  /* .issue-row {
+    width: 600px;
+  } */
 }
 
 .issue-row-line {
@@ -25,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  width: 570px;
+  width: 470px;
 }
 
 .delete {
@@ -33,16 +38,14 @@
 }
 
 .issue-row-line p {
-  margin-bottom: 10px;
-  margin-right: 100px;
-  font-weight: 500;
-  font-size: 1rem;
+  margin-bottom: 0px;
+  width: 130px;
 }
 
 .issue-name {
   width: 200px;
- 
-  margin-left: 40px;
+  margin: 0px;
+  margin-left: 10px;
   color: rgb(87, 87, 87);
 }
 
@@ -52,490 +55,4 @@
   border: none;
   color: red;
   font-weight: bolder;
-  margin-right: 30px;
 }
-.MuiCollapse-container {
-  
-  width: 100%;
-  height: auto;
-  display: flex;
-flex-direction: column;
-align-content: center;
-}
-.MuiPaper-root, .MuiCard-root {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  
-  }
-  .MuiCardContent-root {
-    width: 100%;
-    height: auto;
-    display: flex;
-   flex-direction: column;
-    align-items: center;
-    background: #eeeef0;
-  }
-  
-  @media only screen and (min-width: 280px) {
-    .MuiPaper-root, .MuiCard-root   {
-        width: 100%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  border-width: 2px;
-  border-color: blue;
-    }
-    .MuiCardContent-root {
-       width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-     
-    }
-     .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width:240px;
-      padding: 10px;
-      padding-bottom: 10px;
-      background: rgb(245, 241, 241);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    width: 80%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 2px;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-   .issue-name{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-   font-weight: 700;
-     }
-     .delete {
-       width: 100%;
-       
-     }
-    .delete-button {
-      text-align: center;
-      margin: 0 0;
-    }
-   #important {
-     margin-left: 40px;
-   }
-  }
-  @media only screen and (min-width: 320px) {
-    .MuiPaper-root, .MuiCard-root   {
-        width: 90%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-  
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 280px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    width: 80%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 2px;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-   .issue-name{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-   font-weight: 700;
-     }
-     .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-   #important {
-     margin-left: 40px;
-   }
-  }
-    
-  
-  @media only screen and (min-width: 440px) {
-    .MuiPaper-root, .MuiCard-root   {
-        width: 90%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-  
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 300px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 2px;
-    margin-right: 20px;
-      font-weight: 500;
-      /* font-size: 1rem; */
-    }
-   .issue-name{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-   font-weight: 700;
-     }
-    .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
- 
-   #important {
-     margin-left: 5px;
-   }
- 
-    
-  }
-  @media only screen and (min-width: 520px) {
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 340px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:  3px 5px #411beb;
-    }
-    .issue-name {
-      font-size: 16px;
-      text-align: center;
-    }
-  }
-  @media only screen and (min-width: 680px) {
-    .MuiPaper-root, .MuiCard-root {
-      width: 80%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-    
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 394px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 2px;
-    margin-right: 60px;
-      font-weight: 500;
-      /* font-size: 1rem; */
-    }
-   .issue-name{
-  font-size: 18px;
-   font-weight: 700;
-     }
-    .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
- 
-   #important {
-     margin: 0px 100px 10px 0px;
-   }
-  }
-  @media only screen and (min-width: 768px) {
-    .MuiPaper-root, .MuiCard-root {
-      width: 80%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-       
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 440px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 2px;
-    margin-right: 100px;
-      font-weight: 500;
-      font-size: 18px;
-    }
-   .issue-name{
-  font-size: 18px;
-   font-weight: 700;
-     }
-    .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .delete-button {
-      font-size: 18px;
-      font-weight: 800;
-    }
- 
-   #important {
-     margin: 0px 146px 10px 0px;
-   }
-    
-  }
-  @media only screen and (min-width: 992px) {
-   
-    .MuiPaper-root, .MuiCard-root {
-      width: 80%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-    
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 560px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 120px;
-      font-weight: 500;
-      font-size: 1.5em;
-    }
-   .issue-name{
-  font-size: 2rem;
-   font-weight: 600;
-     }
-    .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .delete-button {
-      font-size: 18px;
-      font-weight: 800;
-    }
- 
-   #important {
-     margin: 0px 150px 10px 20px;
-   }
-   
-    
-  }
-  @media only screen and (min-width: 1280px) {
-    .MuiPaper-root, .MuiCard-root {
-      width: 80%;
-      height: auto;
-      display: flex;
-  flex-direction: column;
-  
-    }
-    .MuiCardContent-root {
-      width: 100%;
-      height: auto;
-      display: flex;
-     flex-direction: column;
-      align-items: center;
-    }
-  
-    .issue-row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 10px;
-      /* border: 1px solid black; */
-      width: 600px;
-      padding: 20px;
-      padding-bottom: 10px;
-      background: rgb(238, 238, 238);
-     
-      border-radius: 5px;
-     
-      box-shadow:   3px 5px #411beb;
-    }
-    .issue-row-line {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    width: 100%;
-    height: auto;
-    }
-    .issue-row-line p {
-      margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 100px;
-      font-weight: 500;
-      font-size: 1.5em;
-    }
-   .issue-name {
-  font-size: 2rem;
-   font-weight: 600;
-     }
-    .delete {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .delete-button {
-      font-size: 18px;
-      font-weight: 800;
-    }
- 
-   #important {
-     margin: 0px 150px 10px 20px;
-   }
-
-  }
