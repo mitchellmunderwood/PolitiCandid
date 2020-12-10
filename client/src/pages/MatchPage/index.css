@@ -1,14 +1,19 @@
 .match-page-unfollow {
   width: 300px;
   margin-bottom: 50px;
+  box-shadow:  1px 1px 1px 2px #411beb;
 }
 
 .match-page-follow {
   width: 300px;
   margin-bottom: 50px;
+  box-shadow:  1px 1px 1px 2px #411beb;
 }
 
 .button-block {
   display: flex;
   justify-content: center;
+}
+#matches-profile-page {
+  box-shadow:  1px 1px 1px 2px #411beb;
 }

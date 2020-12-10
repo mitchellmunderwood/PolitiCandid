@@ -23,6 +23,7 @@
   background: lightgrey;
   border-radius: 5px;
   color: blue;
+  box-shadow:  1px 3px #411beb;
 }
 /* hover style button */
 .update-info-button:hover {
