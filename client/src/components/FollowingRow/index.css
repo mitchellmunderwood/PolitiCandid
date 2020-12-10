@@ -35,3 +35,6 @@
   color: white;
   background: rgb(108, 108, 247);
 }
+.MuiPaper-root, .MuiCard-root, .MuiCardContent-root {
+  background: rgb(245, 241, 241);
+}
